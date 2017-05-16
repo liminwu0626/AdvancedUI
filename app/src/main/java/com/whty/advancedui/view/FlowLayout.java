@@ -9,8 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by wulimin on 2017/5/16.
+ * @function FlowLayout 流式布局
+ * @author wulimin
+ * @time 2017/5/16 下午12:00
  */
+
 
 public class FlowLayout extends ViewGroup {
     /**
@@ -141,10 +144,6 @@ public class FlowLayout extends ViewGroup {
         mLineHeights.clear();
     }
 
-    public interface OnItemClickListener {
-        void onItemClick(View v, int index);
-    }
-
     public void setOnItemClickListener(final OnItemClickListener listener) {
 
         int childCount = getChildCount();
@@ -160,5 +159,9 @@ public class FlowLayout extends ViewGroup {
             });
         }
 
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View v, int index);
     }
 }
